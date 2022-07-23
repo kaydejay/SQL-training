@@ -33,3 +33,24 @@ OR City = 'London';
 -- LIKE: Search for a pattern
 -- OPERATORS AND DESCRIPTORS: IN
 -- To specify multiple possible values for a column
+
+-- The WHERE clause can be combined with AND, OR, and NOT operators. 
+-- The AND operator displays a record if ALL the conditions separated by AND are TRUE.
+-- The OR operator displays a record if ANY of the conditions separated by OR are TRUE.
+-- The NOT operator displays a record if the condition(s) is NOT TRUE.
+
+-- AND Exercise
+SELECT * FROM Customers
+WHERE Country='Germany' AND City ='Berlin';
+-- OR Exercise
+SELECT * FROM Customers
+WHERE City='Berlin' OR City='Munchen';
+-- NOT Exercise
+SELECT * FROM Customers
+WHERE NOT Country='Germany';
+-- Combining AND, OR, and NOT Exercise 1
+SELECT * FROM Customers
+WHERE Country='Germany' AND (City='Berlin' OR City='Munchen');
+-- Combining AND, OR, and NOT Exercise 2
+SELECT * FROM Customers
+WHERE NOT Country='Germany' AND NOT Country='USA';
